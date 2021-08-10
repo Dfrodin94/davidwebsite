@@ -110,6 +110,30 @@ footer {
 
 }
 
+@media screen and (max-width:320px) {
+
+    .about-wrapper {
+        display: grid;
+        place-items: center;
+        /*gap: 4px;*/
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+    }
+
+
+    .title {
+        padding-top: 2em;
+        justify-self: auto;
+
+    }
+    .text-box {
+        padding-top: 2em;
+        justify-self: auto;
+        text-align: center;
+
+    }
+
+}
 
 
 
