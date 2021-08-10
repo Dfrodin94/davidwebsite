@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* header */
+
+.portfolio {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+}
+
+/*main*/
+
+.about-wrapper {
+    display: grid;
+    place-items: center;
+    /*gap: 4px;*/
+    grid-template-columns: repeat(3,1fr);
+}
+
+.title {
+    padding-top: 2em;
+    justify-self: end;
+
+}
+.text-box {
+    padding-top: 2em;
+    justify-self: start;
+
+}
+
+.prog-skills {
+    margin-top: 1%;
+    text-align: center;
+    display: grid;
+}
+
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.skills-wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 8px;
+    grid-auto-flow: column;
+}
+
+.skills-text-box {
+    text-align: center;
+    /*height: 100px;*/
+    /*width: 200px;*/
+}
+
+.black-white {
+    opacity: 0.4;
+}
+
+/*footer*/
+
+footer {
+    margin-top: 1%;
+    text-align: center;
+}
+
+
+
+
+/*mobile */
+
+@media screen and (max-width: 960px) {
+
+    .about-wrapper {
+        display: grid;
+        place-items: center;
+        /*gap: 4px;*/
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+    }
+
+
+    .title {
+        padding-top: 2em;
+        justify-self: auto;
+
+    }
+    .text-box {
+        padding-top: 2em;
+        justify-self: auto;
+        text-align: center;
+
+    }
+
+
+
+
+}
+
+
+
+
