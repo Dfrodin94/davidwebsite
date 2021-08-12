@@ -1,23 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Serif:wght@400;700&display=swap');
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Noto Serif', serif;
+    font-weight: normal;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+
 }
 
 /* header */
 
-.portfolio {
+.header {
     margin-top: 2%;
     text-align: center;
+
 }
 
-.portfolio h2 {
-    font-size: 2rem;
-}
+/*.header h2 {*/
+/*    font-size: 2rem;*/
+/*}*/
 
 /*main*/
 
-.about-wrapper {
+.about__wrapper {
     display: grid;
     place-items: center;
     /*gap: 4px;*/
@@ -28,14 +41,15 @@
     padding-top: 2em;
     justify-self: end;
 
+
 }
-.text-box {
+.about__text {
     padding-top: 2em;
     justify-self: start;
 
 }
 
-.prog-skills {
+.skills__text {
     margin-top: 1%;
     text-align: center;
     display: grid;
@@ -52,22 +66,39 @@
     margin: auto;
 }
 
-.skills-wrapper {
+.skills__wrapper {
     display: grid;
-    justify-content: center;
-    align-content: center;
-    gap: 8px;
-    grid-auto-flow: column;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 1%;
+    padding-left: 20%;
+    padding-right: 20%;
+
 }
 
-.skills-text-box {
+.skills__text h2 {
+    margin-bottom: 0.5em;
+}
+
+.skill__text__box {
     text-align: center;
-    /*height: 100px;*/
-    /*width: 200px;*/
 }
 
-.black-white {
+.skill__text__box h3 {
+    margin-top: 0.5em;
+
+}
+.skill__text__box p {
+    text-align: justify;
+    padding: 0.5em 1em;
+}
+
+.skill__icon {
     opacity: 0.4;
+}
+
+.fas {
+    color:#25557c;
 }
 
 /*footer*/
@@ -75,46 +106,16 @@
 footer {
     margin-top: 1%;
     text-align: center;
+    padding-bottom: 1em;
 }
 
-
-
-
-/*mobile */
-
-@media screen and (max-width: 960px) {
-
-    .about-wrapper {
-        display: grid;
-        place-items: center;
-        /*gap: 4px;*/
-        grid-template-columns: none;
-        grid-template-rows: 1fr;
-    }
-
-
-    .title {
-        padding-top: 2em;
-        justify-self: auto;
-
-    }
-    .text-box {
-        padding-top: 2em;
-        justify-self: auto;
-        text-align: center;
-
-    }
-
-
-
-
-}
+/*mobile and smaller screens */
 
 @media screen
 and (min-width:320px)
 and (max-width: 960px) {
 
-    .about-wrapper {
+    .about__wrapper {
         display: grid;
         place-items: center;
         /*gap: 4px;*/
@@ -122,20 +123,27 @@ and (max-width: 960px) {
         grid-template-rows: 1fr;
     }
 
-
     .title {
         padding-top: 2em;
         justify-self: auto;
 
     }
-    .text-box {
+    .about__text {
         padding-top: 2em;
         justify-self: auto;
         text-align: center;
 
     }
 
+    .skills__wrapper {
+        display: grid;
+        place-items: center;
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+        margin-bottom: 1%;
+        padding-left: 10%;
+        padding-right: 10%;
+
+    }
+
 }
-
-
-
