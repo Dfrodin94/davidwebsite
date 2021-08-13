@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Serif:wght@400;700&display=swap');
 
+.placeholder {
+    color: #F8BD7F;
+    color: #FFA41B;
+    color: #E25822
+
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +16,19 @@
 
 h1, h2 {
     font-family: 'Noto Serif', serif;
-    font-weight: normal;
 }
 
-p{
+h1 {
+    font-weight: bold;
+}
+
+p {
     font-family: 'Lato', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
 
 }
 
@@ -21,28 +37,47 @@ p{
 .header {
     margin-top: 2%;
     text-align: center;
-
 }
 
-/*.header h2 {*/
-/*    font-size: 2rem;*/
-/*}*/
+.header a:link {
+    color: #25557c;
+}
+
+.header a:visited {
+    color: #25557c;
+}
+
+.header a:hover {
+    color: #E25822;
+}
 
 /*main*/
 
 .about__wrapper {
     display: grid;
     place-items: center;
-    /*gap: 4px;*/
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .title {
     padding-top: 2em;
     justify-self: end;
 
-
 }
+
+a:link {
+    color: #E25822;
+}
+
+a:visited {
+    color: #E25822;
+}
+
+a:hover {
+    color: #25557c;
+}
+
+
 .about__text {
     padding-top: 2em;
     justify-self: start;
@@ -50,17 +85,18 @@ p{
 }
 
 .skills__text {
-    margin-top: 1%;
     text-align: center;
     display: grid;
 }
 
-.imgbox {
+.img__wrapper {
     display: grid;
     height: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
-.center-fit {
+.img__center {
     max-width: 100%;
     max-height: 100vh;
     margin: auto;
@@ -69,14 +105,13 @@ p{
 .skills__wrapper {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(3,1fr);
-    margin-bottom: 1%;
+    grid-template-columns: repeat(3, 1fr);
     padding-left: 20%;
     padding-right: 20%;
-
 }
 
 .skills__text h2 {
+    margin-top: 0.75em;
     margin-bottom: 0.5em;
 }
 
@@ -88,17 +123,20 @@ p{
     margin-top: 0.5em;
 
 }
+
 .skill__text__box p {
     text-align: justify;
     padding: 0.5em 1em;
 }
 
-.skill__icon {
-    opacity: 0.4;
+/*fontaawsome icons */
+
+.fas, .far {
+    color: #25557c;
 }
 
-.fas {
-    color:#25557c;
+.fas:hover, .far:hover {
+    color: #E25822;
 }
 
 /*footer*/
@@ -112,13 +150,12 @@ footer {
 /*mobile and smaller screens */
 
 @media screen
-and (min-width:320px)
+and (min-width: 320px)
 and (max-width: 960px) {
 
     .about__wrapper {
         display: grid;
         place-items: center;
-        /*gap: 4px;*/
         grid-template-columns: none;
         grid-template-rows: 1fr;
     }
@@ -128,11 +165,11 @@ and (max-width: 960px) {
         justify-self: auto;
 
     }
+
     .about__text {
         padding-top: 2em;
         justify-self: auto;
         text-align: center;
-
     }
 
     .skills__wrapper {
@@ -143,7 +180,6 @@ and (max-width: 960px) {
         margin-bottom: 1%;
         padding-left: 10%;
         padding-right: 10%;
-
     }
 
 }
