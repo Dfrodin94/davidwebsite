@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Serif:wght@400;700&display=swap');
 
+:root {
+    --clr-primary: #25557c;
+    --clr-secondary: #E25822;
+    --clr-background: #f1eedb;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color:var(--clr-background);
 }
 
 h1, h2 {
@@ -12,16 +22,23 @@ h1, h2 {
 
 h1 {
     font-weight: bold;
+    font-size: xxx-large;
 }
 
 p {
     font-family: 'Lato', sans-serif;
-
 }
 
 a {
     text-decoration: none;
+}
 
+a:link, a:visited  {
+    color: var(--clr-secondary);
+}
+
+a:hover {
+    color: var(--clr-primary);
 }
 
 /* header */
@@ -31,16 +48,24 @@ a {
     text-align: center;
 }
 
-.header a:link {
-    color: #25557c;
+.header h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.header a:visited {
-    color: #25557c;
+.header a:link, .header a:visited  {
+    color: var(--clr-primary);
 }
 
 .header a:hover {
-    color: #E25822;
+    color: var(--clr-secondary);
+}
+
+.header__line{
+    margin-left: 40%;
+    margin-right: 40%;
+    height: 2px;
+    background-color: var(--clr-secondary);
 }
 
 /*main*/
@@ -54,21 +79,7 @@ a {
 .title {
     padding-top: 2em;
     justify-self: end;
-
 }
-
-a:link {
-    color: #E25822;
-}
-
-a:visited {
-    color: #E25822;
-}
-
-a:hover {
-    color: #25557c;
-}
-
 
 .about__text {
     padding-top: 2em;
@@ -95,7 +106,6 @@ a:hover {
 }
 
 .skills__wrapper {
-
     display: grid;
     place-items: center;
     grid-template-columns: repeat(3, 1fr);
@@ -126,11 +136,8 @@ a:hover {
 /*fontaawsome icons */
 
 .fas, .far {
-    color: #25557c;
-}
 
-.fas:hover, .far:hover {
-    color: #E25822;
+    color: var(--clr-primary);
 }
 
 /*footer*/
@@ -139,6 +146,47 @@ footer {
     margin-top: 1%;
     text-align: center;
     padding-bottom: 1em;
+}
+
+/*Portfolio site */
+
+.decor {
+    color: var(--clr-secondary);
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: var(--clr-primary);
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.projects__wrapper{
+    margin-top: 1%;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.projects__wrapper h3 {
+    font-size: 1.5rem;
+}
+
+.weather-project__wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.crystal-ball{
+    font-size: 60px;
+    cursor: pointer;
+}
+.crystal-ball-clicked{
+  opacity: 0.5;
 }
 
 /*mobile and smaller screens */
@@ -157,7 +205,6 @@ and (max-width: 960px) {
     .title {
         padding-top: 2em;
         justify-self: auto;
-
     }
 
     .about__text {
@@ -174,6 +221,16 @@ and (max-width: 960px) {
         margin-bottom: 1%;
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    .header__line{
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+    .projects__wrapper{
+        margin-left: 20%;
+        margin-right: 20%;
     }
 
 }
