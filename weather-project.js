@@ -10,6 +10,8 @@ document.getElementById("weather-project__button").
 
     let api = "https://api.openweathermap.org/data/2.5/weather";
     let apiKey = "4fc19dab219f3db77635f639ee673ae3";
+    // hade använt env om jag hade byggt i node.js
+    // känns ändå fel att ha en api-nyckel public 
 
     navigator.geolocation.getCurrentPosition(success,error);
 
